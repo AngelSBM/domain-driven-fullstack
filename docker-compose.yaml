@@ -1,0 +1,19 @@
+
+version: '3'
+
+
+services:
+  angular:
+    image: 'c-frontend'
+    build: domain-driven-frontend
+    ports:
+      - 80:80
+
+  server:
+    image: 'dddapplication'
+    build: 'Domain-Driven-Backend/DDD.Application/'
+    ports:
+    - 5010:5010
+
+
+  
